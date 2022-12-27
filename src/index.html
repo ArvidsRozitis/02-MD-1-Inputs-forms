@@ -10,12 +10,76 @@
     <title>Document</title>
 </head>
 <body>
+    <section class="section">
+        <form class="form__log-in">
+            <div class="container__log-in--input">
+                <label class="input__label--normal">
+                    Email
+                    <br>
+                    <input
+                        type="email"
+                        placeholder="insert your email"
+                        class="input__field--single-line"
+                        required
+                    >
+                </label>
+                <label class="input__label--normal">
+                    Password
+                    <br>
+                    <input
+                        type="password"
+                        placeholder="insert your password"
+                        class="input__field--single-line"
+                        required    
+                    >
+                </label>
+            </div>
+            <label class="switch__subscribe-to-news">
+                <label class="switch">
+                    <input type="checkbox">
+                    <span class="slider round"></span>
+                </label>
+                Subscribe to News
+            </label>       
+            <div class="container__log-in--buttons">
+                <button type="submit" class="btn__sign-in">
+                    Sign In
+                </button>
+                <a href="" class="link__forgot-your-password">Forgot your password?</a>
+                <hr class="divider__log-in">
+                <div class="container__log-in--continue-with">
+                    <span class="selection_text">or continue with</span>
+                    <div class="container__continue-with--buttons">
+                        <button type="button" class="btn__continue-with">
+                            <span class="icon__social icon__social--google">
+                        </button>
+                        <button type="button" class="btn__continue-with">                            
+                            <span class="icon__social icon__social--facebook">
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </form>
+    </section>
+
+    <button id="toggleThemeBtn">Toggle dark mode</button>
+
     <h1>
         Hello World
     </h1>
-    <img src="/assets/images/cat.jpeg" alt="" width="300">
+    
 
+    
+    <script>
+    const toggleThemeBtn = document.getElementById('toggleThemeBtn')
 
-    <script src="/scripts.js"></script>
+    toggleThemeBtn.addEventListener('click', () => {
+    document.body.classList.toggle('darkTheme');
+    })
+    </script>
+
+    <script src="/scripts.js"></script> 
 </body>
 </html>
+
+
